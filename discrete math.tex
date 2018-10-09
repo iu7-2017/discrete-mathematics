@@ -1,0 +1,241 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{ amssymb }
+\usepackage{color}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\textbf{МОДУЛЬ 1: Множества, отношения, алгебры}
+
+
+Вопросы для подготовки к рубежному контролю
+
+\bigskip
+
+\begin{enumerate}
+\item % -----------------------------------1---------------------------------------
+\textbf {Множества, подмножества. Способы определения множеств. Равенство множеств. Операции над множествами (объединение, пересечение, разность, симметрическая разность, дополнение). Методы доказательства теоретико-множественных тождеств.}
+
+\hrulefill
+
+Исходное не определяемое строго понятие\\\\
+Определение по Кантору: Под многообразием или множеством я понимаю вообще всё многое, которое возможно мыслить как единое, т.е. такую совокупность определяемых элементов, которая посредством одного закона может быть соеденена в одно целое.
+
+Может быть записано, как $A = \{x: P(x)\}$, где P -- характеристический предикат
+
+\textbf{Равенство множеств}
+$A = B \rightleftharpoons (x \in A \iff x \in B)$
+
+\textbf{Подмножество} $A \subseteq B \rightleftharpoons (\forall x) (x \in A \Rightarrow x \in B)$
+
+\textbf{Строгое подмножество} $A \subset B \rightleftharpoons (A \leq B) \land (A \neq B)$
+
+Операции
+
+\textbf{Объединение} $A \cup  B = \{x: (x \in A) \lor (x \in B) \}$
+
+\textbf{Пересечение} $A \cap B = \{x: (x \in A) \land (x \in B) \}$
+
+\textbf{Разность} $A \setminus B = \{x: (x \in A) \land (x \notin B) \}$ 
+
+\textbf{Симметрическая разность} $A \bigtriangleup B = (A \setminus B) \cup (B \setminus A)$
+
+\textbf{Дополнение} $\overline{\rm A} = \{x: x \notin A\}$
+
+Методы доказательств:  
+
+Метод двух включений
+
+Метод характеристических функций
+
+Метод эквивалентных преобразований
+
+\hrulefill
+\item % -----------------------------------2---------------------------------------
+\textbf{Неупорядоченная пара, упорядоченная пара, кортеж. Декартово произведение множеств.}
+
+\hrulefill
+
+\textbf{Неупорядоченная пара} на множествах $A$ и $B$ 
+
+$A,B \neq \emptyset \quad a \in A, b \in B \quad \{a,b\}$
+
+\textbf{Упорядоченная пара} $(a,b)$ определяется не только элементами $a$ и $b$, но и порядком в котором они записаны 
+
+\textbf{Кортеж} $(a_1,a_2,...,a_n)$ на множествах $A_1,A_2,...,A_n$ -- обобщение пары для $n$ элементов
+
+Множество всех кортежей длины $n$ на множествах $A_1,A_2,...,A_n$ называют \textbf{декартовым произведением} множеств $A_1,A_2,...,A_n$ и обозначают  $A_1 \times A_2 \times ... \times A_n$.
+
+\hrulefill
+
+\item % -----------------------------------3---------------------------------------
+\textbf{Отображения: область определения, область значений. Инъективное, сюръективное и биективное отображения. Частичное отображение.}
+
+\hrulefill
+
+$f: A \rightarrow B$ -- отображение $A$ в $B$
+
+{\color{red} Пусто}
+
+\hrulefill
+\item % -----------------------------------4---------------------------------------
+\textbf{Соответствия. График и граф соответствия, область определения, область значения. Сечение соответствия. Сечение соответствия по множеству. Функциональность соответствия по компоненте. Бинарные и n-арные отношения. Связь между отношениями, соответствиями и отображениями.}
+
+\hrulefill
+
+{\color{red} Пусто}
+
+\hrulefill
+\item % -----------------------------------5---------------------------------------
+\textbf{Композиция соответствий, обратное соответствие и их свойства (с доказательством).}
+
+\hrulefill
+
+\textbf{Композицией соответствий} 
+$\rho \subseteq A \times B, \sigma \subseteq B \times C$ 
+называют соответствие 
+$\rho \circ \sigma = \{ (x,y): (\exists z \in B) ((x,z) \in \rho) \land ((z,y)) \in \sigma \} $.
+
+Cвойства:
+
+1) $\rho \circ (\sigma \circ \tau) = (\rho \circ \sigma) \circ \tau $ (Ассоциативность)
+
+Доказательство:
+
+\begin{math}
+(x,y) \in \rho \circ (\sigma \circ \tau) \Rightarrow\\
+(\exists z) ((x,z) \in \rho) \land ((z,y) \in (\sigma \circ \tau)) \Rightarrow \\
+(\exists z,u) ((x,z) \in \rho) \land ((z,u) \in \sigma) \land ((t,y) \in \tau) \Rightarrow \\
+(\exists u)((x,u) \in (\rho \circ \sigma)) \land ((u,y) \in \tau) \Rightarrow\\
+(x,y) \in (\rho \circ \sigma) \circ \tau
+\end{math}
+
+Обратно аналогично
+
+
+2) $ \rho \circ (\sigma \cup \tau) =  (\rho \circ \sigma) \cup (\rho \circ \tau)$ (Дистрибутивность относительно объединения)
+
+Доказательство:
+
+\begin{math}
+(x,y) \in \rho \circ (\sigma \cup \tau) \Rightarrow\\
+(\exists z) ((x,z) \in \rho) \land ((z,y) \in (\rho \cup \tau)) \Rightarrow\\
+(\exists z) ((x,z) \in \rho) \land (((z,y) \in \rho) \lor ((z,y) \in \tau)) \Rightarrow\\
+(\exists z) (((x,z) \in \rho) \land ((z,y) \in \sigma)) \lor (((x,z )\in \rho) \land ((z,y) \in \tau)) \Rightarrow\\
+(x,y) \in \rho \circ \sigma \lor (x,y) \in \rho \circ \tau \Rightarrow\\
+(x,y) \in \rho \circ \sigma \cup \rho \circ \tau
+\end{math}
+
+Обратно 
+
+\begin{math}
+(x,y) \in \rho \circ \sigma \cup \rho \circ \tau \Rightarrow\\ 
+(\exists u) (((x,u) \in  \rho) \land ((u,y) \in \sigma)) \lor (\exists v)(((x,v) \in  \rho) \land ((u,v) \in \tau)) \Rightarrow\\ 
+(\exists z) (((x,z) \in \rho) \land (((z,y) \in \sigma) \lor ((z,y) \in \tau))) \Rightarrow\\ 
+(\exists z) (((x,z) \in \rho) \land ((z,y) \in \sigma \circ \tau)) \Rightarrow\\ 
+(x,y) \in \rho \circ (\sigma \cup \tau)
+\end{math}
+
+{\color{red} Доказательства двух включений не симметричны! u и v во второй половине не обязанны быть равны}
+
+3) $\rho \circ \emptyset = \emptyset \circ \rho = \emptyset$
+
+{\color{red} Нет доказательства}
+
+4) Для $\rho \subseteq A^2: \rho \circ id_a = id_a \circ \rho = \rho $
+
+
+
+
+{\color{red} Нет доказательства}
+
+\textbf{Обратным соответствием} к соответствию $\rho \in A \times B$ называют соответствие
+$\rho^{-1} = \{(y,x): (x,y) \in \rho\} $
+
+Свойства:
+
+1)  $(\rho^{-1})^{-1} = \rho$
+
+{\color{red} Нет доказательства}
+
+2) $(\rho \circ \sigma)^{-1} = \rho^{-1} \circ \sigma^{-1}$
+
+
+{\color{red} Нет доказательства}
+
+
+\hrulefill
+\item % -----------------------------------6---------------------------------------
+\textbf{Специальные свойства бинарных отношений на множестве (рефлексивность, иррефлексивность, симметричность, антисимметричность, транзитивность).}
+
+\hrulefill
+
+\textbf{Рефлексивность} $\forall x : x\rho x$
+
+\textbf{Иррефлексивность} $\nexists x:  x\rho x $
+
+\textbf{Симметричность} $\forall x,y : (x \rho y \Rightarrow y \rho x) $
+
+\textbf{Антисимметричность} $\forall x,y : (x\rho y) \land (y \rho x) \Rightarrow x = y $
+
+\textbf{Транзитивность} $\forall x,y,z : (x\rho y) \land (y \rho z) \Rightarrow x\rho z $
+
+\hrulefill
+
+
+\item % -----------------------------------7---------------------------------------
+\textbf{Классификация бинарных отношений на множестве: эквивалентность, толерантность, порядок, предпорядок, строгий порядок.}
+
+\hrulefill
+
+Бинарное отношение на некотором множестве называют 
+
+\textbf{Эквивалентностью}, если оно рефлексивно, симметрично и транзитивно
+
+\textbf{Толерантностью}, если оно рефлексивно и симметрично
+
+\textbf{Порядком}, если оно рефлексивно, антисимметрично и транзитивно
+
+\textbf{Предпорядком}, если оно рефлексивно и транзитивно
+
+\textbf{Строгим порядком}, если оно иррефлексивно, антисимметрично и транзитивно
+
+
+\hrulefill
+\item % -----------------------------------8---------------------------------------
+\textbf{Отношение эквивалентности. Класс эквивалентности. Фактор-множество.}
+
+\hrulefill
+
+{\color{red} Пусто}
+
+\hrulefill
+\item % -----------------------------------9---------------------------------------
+\textbf{Отношения предпорядка и порядка. Наибольший, максимальные, наименьший и минимальные элементы. Точная нижняя и верхняя грани множества.}
+
+\hrulefill
+
+{\color{red} Пусто}
+
+\hrulefill
+\item % -----------------------------------10--------------------------------------
+\textbf{Точная верхняя грань последовательности. Индуктивное упорядоченное множество. Теорема о неподвижной точке (с доказательством). Пример вычисления неподвижной точки.}
+
+\hrulefill
+
+{\color{red} Пусто}
+
+\end{enumerate}
+
+
+
+$\forall x \in X, \quad \exists y \leq \epsilon$
+
+\section{}
+
+\end{document}
